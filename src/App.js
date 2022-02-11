@@ -1,6 +1,14 @@
 function App() {
   return (
-    <div>Hello World!</div>
+    <div>
+      <h1>Todos</h1>
+      <div>
+        <h2>TITLE</h2>
+        <div>
+          <button>Delete</button>
+        </div>
+      </div>
+    </div>
   );
 }
 
