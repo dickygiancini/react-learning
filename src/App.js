@@ -1,12 +1,18 @@
-import Todo from './components/Todo';
+import Todo from "./components/Todo";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row } from "react-bootstrap";
 
 function App() {
   return (
-    <div>
-      <h1>Todos</h1>
-      <Todo text="Learn React" />
-      <Todo text="Master React" />
-    </div>
+    <Container>
+        <div>
+          <h1>Todos</h1>
+          <Row>
+            <Todo text="Learn React" />
+            <Todo text="Master React" />
+          </Row>
+        </div>
+    </Container>
   );
 }
 

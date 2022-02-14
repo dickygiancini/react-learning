@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import Modal from './Modal';
-import Backdrop from './Backdrop';
+import { useState } from "react";
+import Modal from "./Modal";
+import Backdrop from "./Backdrop";
+import { Card, Button, Col } from "react-bootstrap";
 
 function Todo(props) {
-
-  const [ modalIsOpen, setModalIsOpen ] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function openModalHandler() {
     setModalIsOpen(true);
@@ -15,15 +15,25 @@ function Todo(props) {
   }
 
   return (
-    <div className="card">
-      <h2>{props.text}</h2>
-      <div className="actions">
-        <span>...</span>
-        <button className="btn" onClick={openModalHandler}>Delete</button>
-      </div>
-      { modalIsOpen ? <Modal onClick={closeModalHandler} onConfirm={closeModalHandler} /> : null }
-      { modalIsOpen && <Backdrop onClick={closeModalHandler} /> }
-    </div>
+      <Col md={6}>
+        <Card>
+          <Card.Body>
+            <h2>{props.text}</h2>
+            <div className="actions">
+              <Button variant="danger" onClick={openModalHandler}>
+                Delete
+              </Button>
+            </div>
+            {modalIsOpen && (
+              <Modal
+                onClick={closeModalHandler}
+                onConfirm={closeModalHandler}
+              />
+            )}
+            {modalIsOpen && <Backdrop onClick={closeModalHandler} />}
+          </Card.Body>
+        </Card>
+      </Col>
   );
 }
 
