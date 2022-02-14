@@ -1,8 +1,7 @@
 function Todo(props) {
 
   function deleteHandler() {
-    console.log('Clicked');
-    console.log(props.text)
+    
   }
 
   return (
