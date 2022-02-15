@@ -4,7 +4,7 @@ import { Container, Row } from "react-bootstrap";
 
 function App() {
   return (
-    <Container>
+      <Container>
         <div>
           <h1>Todos</h1>
           <Row>
@@ -12,7 +12,7 @@ function App() {
             <Todo text="Master React" />
           </Row>
         </div>
-    </Container>
+      </Container>
   );
 }
 
