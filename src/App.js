@@ -1,35 +1,17 @@
-import { Route } from "react-router-dom";
-import AllMeetups from "./pages/AllMeetups";
-import Favourite from "./pages/Favourite";
-import NewMeetups from "./pages/NewMeetup";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Route, Routes } from "react-router-dom";
+import AllMeetupsPage from "./pages/AllMeetups";
+import FavoritesPage from "./pages/Favourite";
+import NewMeetupPage from "./pages/NewMeetup";
 
 function App() {
   return (
-    // <Container>
-    //   <Route path="/">
-    //     <AllMeetups></AllMeetups>
-    //   </Route>
-    //   <Route path='/new-meetup'>
-    //     <NewMeetups></NewMeetups>
-    //   </Route>
-    //   <Route path='/favourite'>
-    //     <Favourite></Favourite>
-    //   </Route>
-    // </Container>
-    <Container fluid>
-      <Navbar bg="dark" variant="dark">
-        <Container fluid>
-          <Navbar.Brand href="/">All Meetups</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/new-meetup">New Meetups</Nav.Link>
-            <Nav.Link href="/favourite">Favourite</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </Container>
+    <div>
+      <Routes>
+        <Route path='/' element={<AllMeetupsPage />}></Route>
+        <Route path='/new-meetup' element={<NewMeetupPage />}></Route>
+        <Route path='/favourite' element={<FavoritesPage />}></Route>
+      </Routes>
+    </div>
   );
 }
 

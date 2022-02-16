@@ -1,5 +1,5 @@
-function Favourite() {
-    return <div>Favourite</div>
-}
-
-export default Favourite;
+function FavoritesPage() {
+    return <div>Favorites Page</div>;
+  }
+  
+export default FavoritesPage;
