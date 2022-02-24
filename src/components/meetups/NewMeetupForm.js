@@ -24,7 +24,7 @@ function NewMeetupForm() {
                 <textarea id="description" required rows="5"></textarea>
             </div>
 
-            <div className={classes.action}>
+            <div className={classes.actions}>
                 <button type="button">Add Meetup</button>
             </div>
             
